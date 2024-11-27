@@ -1,0 +1,53 @@
+#define ROJO 9
+#define AMARILLO 11
+#define VERDE 13
+
+void setup() {
+pinMode(ROJO, OUTPUT);    
+pinMode(AMARILLO, OUTPUT);    
+pinMode(VERDE, OUTPUT); 
+
+digitalWrite(ROJO, HIGH);
+digitalWrite(AMARILLO, HIGH);
+digitalWrite(VERDE, HIGH);
+delay(1000);
+digitalWrite(ROJO, LOW);
+digitalWrite(AMARILLO, LOW);
+digitalWrite(VERDE, LOW); 
+delay(1000);
+}
+
+void loop() {
+Rojo();
+delay(3000);
+RojoAmarillo();
+delay(1000);
+Verde();
+delay(3000);
+Amarillo();
+delay(1000);
+}
+
+void Rojo(){
+digitalWrite(ROJO, HIGH);
+digitalWrite(AMARILLO, LOW);
+digitalWrite(VERDE, LOW);
+}
+
+void Amarillo(){
+digitalWrite(ROJO, LOW);
+digitalWrite(AMARILLO, HIGH);
+digitalWrite(VERDE, LOW);
+}
+
+void Verde(){
+digitalWrite(ROJO, LOW);
+digitalWrite(AMARILLO, LOW);
+digitalWrite(VERDE, HIGH); 
+}
+
+void VerdeAmarillo(){
+digitalWrite(ROJO, HIGH);
+digitalWrite(AMARILLO, HIGH);
+digitalWrite(VERDE, LOW);  
+}
